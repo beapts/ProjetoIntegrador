@@ -91,6 +91,7 @@ nav{
 
 
 /* --- Seção de Destaques ---*/
+
 .headerDestaques, .headerColecao{
     display: flex;
     flex-direction: column;
@@ -179,7 +180,7 @@ button {
 }
 
 .botaoImportante {
-    width: 49rem;
+    width: 100%;
     margin-left: 1rem;
 }
 
