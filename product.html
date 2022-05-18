@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@100;300&family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" id="textoPromocional">Texto promocinal - Frete grátis para todo o Brasil a partir de R$200, 00 em compras</a>
+        <nav>
+            <div class="headerLogo"> 
+                <img id="imagemLogo" src="./img/logo_plantinha.png" alt="Logo da Loja" />
+            </div>
+
+            <ul>
+                <li class="menuOpcoes">Home</li>
+                <li class="menuOpcoes">Produtos</li>
+                <li class="menuOpcoes">Seilá</li>
+            </ul>
+
+            <section>
+                <a href="#" class="navIcones"> <img src="./img/lupa _1.png"/> </a>
+                <a href="#" class="navIcones"> <img src="./img/adicionar-usuario.png"/> </a>
+                <a href="#" class="navIcones"> <img src="./img/coracao.png"/> </a>
+                <a href="#" class="navIcones"> <img src="./img/carrinho-carrinho.png"/> </a>
+            </section>
+        </nav>
+    </header>
+
+    <div class="mini-menu">
+        <a href="/">Home</a>
+        <span class="mini-divisor-do-mini-menu">•</span>
+        <span class="pagina-atual">Produto Atual</span>
+        </div>
+     
+    <div class="produto-container">
+        <div class="imagem-produto-atual">
+            <img class="img-produto-atual" src="./img/plants/severin-candrian-y0C-eGur0nU-unsplash.jpg"/>
+        </div>
+        <div class="descricao-produto-atual">
+            <h3 class="titulo-produto-atual"> Titulo do Produto </h3>
+            <p class="preco-produto-atual"> R$ 000,00</p>
+            <div class="adicionar-carrinho">
+                <div class="adicionar-quantidade">
+                    <input id="quantidade" class="adicionar-quantidade-input" value="1" type="number" name="quantidade">
+                </div>
+                <div class="adicionar-produto">
+                    <button class="botao-comprar-produto-atual"> Comprar </button>
+                </div>
+            </div>
+            <p class="desc-produto-atual"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta tellus sit amet eros gravida consequat. Vivamus nunc metus, rhoncus in sapien nec, porta convallis lacus. Proin ornare, felis id rhoncus pretium, velit diam feugiat elit, vitae malesuada sem nisi nec neque. Sed bibendum, nunc vitae suscipit luctus, lectus eros viverra mauris, vel facilisis ipsum orci a erat. Praesent malesuada nunc sed eros luctus hendrerit. Quisque eget hendrerit lectus.  </p>
+            <div class="pesquisa-cep-container">
+                <input type="tel" name="zipcode" class="pesquisa-cep" placeholder="Pesquisar CEP" value="">
+                <button class="pesquisa-cep-botao"> Pesquisar </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="produtos-relacionados">
+        <p class="titulo-produtos-relacionados">Produtos Relacionados:</p>
+        <div class="produtosColecao">
+            <div class="produtosCol" id="colecao_primeiro"> 
+                <img class="img_colecao" src="./img/plants/severin-candrian-qoegZJ3ybOY-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+
+            <div class="produtosCol" id="colecao_segundo"> 
+                <img class="img_colecao" src="./img/plants/severin-candrian-qQZdmUzXjZA-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+
+            <div class="produtosCol" id="colecao_terceiro"> 
+                <img class="img_colecao" src="./img/plants/severin-candrian-SOhatM1jFLk-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+
+            <div class="produtosCol" id="colecao_quarto"> 
+                <img class="img_colecao" src="./img/plants/severin-candrian--11MmJRwCPo-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <section id="footerLinks"> 
+            <div id="footerInstitucional"> 
+                <h3> Institucional: </h3>
+                <a href="#" id="">Texto </a>
+                <a href="#" id="">Texto </a>
+                <a href="#" id="">Texto </a>
+            </div>
+
+            <div id="footerAjuda"> 
+                <h3> Ajuda: </h3>
+                <a href="#" id="">Texto </a>
+                <a href="#" id="">Texto </a>
+                <a href="#" id="">Texto </a>
+            </div>
+
+            <div id="footerMinhaConta"> 
+                <h3> Minha Conta: </h3>
+                <a href="#" id="">Texto </a>
+                <a href="#" id="">Texto </a>
+                <a href="#" id="">Texto </a>
+            </div>
+        </section>
+
+        <div class="footerSocialMedia">
+            <a href="#"> <img src="./img/whatsapp-white.png"/> </a>
+            <a href="#"> <img src="./img/twitter-white.png"/> </a>
+            <a href="#"> <img src="./img/instagram_white.png"/> </a>
+        </div>
+
+        <p> Dados da empresa - CNPJ - Endereço</p>
+    </footer>
+</body>
+</html>

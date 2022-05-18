@@ -1,0 +1,74 @@
+/* --- Mini-menu ---*/
+
+.mini-menu {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* --- Descrição Produto ---*/
+
+.produto-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.img-produto-atual {
+    width: 35rem;
+    margin: 1rem;
+}
+
+.descricao-produto-atual {
+    margin: 1rem;
+    width: 35rem;
+}
+
+.titulo-produto-atual {
+    font-size: 2rem;
+}
+
+.preco-produto-atual {
+    margin: 2rem 0rem 2rem 0rem;
+    font-size: 2rem;
+}
+
+.adicionar-quantidade-input {
+    width: 5rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.botao-comprar-produto-atual {
+    height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+.desc-produto-atual {
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 1.2rem;
+}
+
+.pesquisa-cep-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pesquisa-cep {
+    font-size: 0.8rem;
+    height: 2.5rem;
+    width: 35rem;
+}
+
+.pesquisa-cep-botao {
+    width: 35rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+/* --- Produtos Relacionados ---*/
+
+.titulo-produtos-relacionados {
+    margin: 2rem 0rem 2rem 0rem;
+    font-size: 1.2rem;
+}
