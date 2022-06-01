@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Registro'}) %>
+<body>
+    <%- include('partials/headerNavbar') %>
+
+    <main>
+        <div class="container">
+            <div class="containerRegistro">
+                <h2 class="texto-entrar">ENTRAR</h2>
+                <form class="form">
+                    <label class="label-input">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Digite o seu email">
+                    </label>
+                    <label class="label-input">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Digite a sua senha">
+                    </label>
+                </form>
+                <button class="btn btn-entrar">Entrar</button>
+
+                <div class="criar-conta">
+                    <h2 class="texto">Conectar com</h2>
+                    <div class="social-media">
+                        <ul class="lista-social-media">
+
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-facebook-f"></i>        
+                                </li>
+                            </a>
+
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-google-plus-g"></i>        
+                                </li>
+                            </a>
+
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-linkedin-in"></i>        
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+                    <h2 class="texto-conta">Você ainda não tem uma conta?</h2>
+                        <button class="btn btn-criar">Criar conta</button>
+                </div>  
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+</main>
+
+
+<body
