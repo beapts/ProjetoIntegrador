@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Produtos'}) %>
+<link href="/css/carrinho.css" rel="stylesheet" type="text/css">
+    <body>
+        <%- include('partials/headerNavbar') %>
+        <div class="main-container">
+            <div class="carrinho-container">
+                <div class="carrinho-topo">
+                    <a href="/" class="continuar-comprando">Continuar Comprando</a>
+                </div>
+                <div class="carrinho-meio">
+                    <div class="carrinho-esquerda">
+                        <div class="carrinho-esquerda-container">
+                            <p class="carrinho-esquerda-topo">Seu carrinho</p>
+                            <div class="carrinho-esquerda-meio">
+                                <div class="produtos-selecionados-aqui">
+                                    <img class="img-produto-atual" src="/images/plants/severin-candrian-y0C-eGur0nU-unsplash.jpg"/>
+                                    <span class="nome-produto-atual">Planta Vermelha Pequena</span>
+                                    <div class="adicionar-quantidade">
+                                        <input id="quantidade" class="adicionar-quantidade-input" value="1" type="number" name="quantidade">
+                                    </div>
+                                    <p class="preco-produto-atual"> R$ 30,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrinho-direita">
+                        <div class="carrinho-direita-meio">
+                            <div class="pesquisa-cep-container">
+                                <input type="tel" name="zipcode" class="pesquisa-cep" placeholder="Pesquisar CEP" value="">
+                                <button class="pesquisa-cep-botao"> Pesquisar </button>
+                            </div>
+                            <div class="cupom-container">
+                                <input type="text" name="cupom" class="area-cupom" placeholder="CUPOM" value="">
+                                <button class="verificar-cupom"> Usar cupom </button>
+                            </div>
+                            <div class="resumo-compra">
+                                <div class="subtotal">
+                                    <span class="subtotal-texto">Subtotal</span>
+                                    <span class="subtotal-valor">R$30,00</span>
+                                </div>
+                                <div class="descontos">
+                                    <span class="desconto-texto">Desconto</span>
+                                    <span class="desconto-valor">R$2,00</span>
+                                </div>
+                                <div class="total">
+                                    <span class="total-texto">Total</span>
+                                    <span class="total-valor">R$28,00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carrinho-direita-baixo">
+                            <button class="checkout-botao"> Finalizar compra </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+    </body>
+</html>
