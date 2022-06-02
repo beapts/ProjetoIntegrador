@@ -7,6 +7,9 @@ const controller = {
 	},
 	produtos: (req, res) => {
 		res.render('produtos');
+	},
+	carrinho: (req, res) => {
+		res.render('carrinho');
 	}
 }
 
