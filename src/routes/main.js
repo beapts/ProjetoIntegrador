@@ -7,5 +7,7 @@ router.get('/', mainController.index);
 router.get('/registro', mainController.registro); 
 router.get('/produtos', mainController.produtos); 
 router.get('/carrinho', mainController.carrinho);
+router.get('/cadastro', mainController.cadastro);
+router.post('/', mainController.login);
 
 module.exports = router;
