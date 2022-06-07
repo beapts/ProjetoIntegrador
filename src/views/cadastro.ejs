@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Cadastro'}) %>
+<link href="/css/cadastro.css" rel="stylesheet" type="text/css">
+    <body>
+        <%- include('partials/headerNavbar') %>
+        <div class="main-container">
+            <div class="criar-conta">
+                <div class="criar-conta-topo">
+                    <h2>CRIAR CONTA</h2>
+                </div>
+                <div class="criar-conta-meio">
+                    <form action="/" method="POST" class="form-cadastro">
+                        <p><label for="nome">Nome Completo:</label></p>
+                        <p><input type="text" name="nome" id="nome"></p>
+                        <p><label for="email">E-mail:</label></p>
+                        <p><input type="email" name="email" id="email"></p>
+                        <p><label for="senha">Senha:</label>
+                        <p><input type="password" name="senha" id="senha"></p>
+                        <p><label for="confirmacao">Confirmar senha:</label>
+                        <p><input type="password" name="confirmacao" id="confirmacao"></p>
+                        <div class="criar-conta-baixo">
+                            <a href="/">Voltar</a>
+                            <button class="botao-cadastro"> Enviar </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+    </body>
+</html>
