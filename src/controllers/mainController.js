@@ -10,6 +10,15 @@ const controller = {
 	},
 	carrinho: (req, res) => {
 		res.render('carrinho');
+	},,
+	cadastro: (req, res) => {
+		res.render('cadastro');
+	},
+	login: (req, res) => {
+		const autentication = true;
+		if(true) {
+			return res.redirect('/login');
+		}
 	}
 }
 
