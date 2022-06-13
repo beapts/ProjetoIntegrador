@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Compras'}) %>
+<link href="/ProjetoIntegrador/public/css/compras.css" rel="stylesheet" type="text/css">
+    <body>
+        <%- include('partials/headerNavbar') %>
+        
+        <main>
+            <section class="titulo">
+                <div>
+                    <h1> Meu Carrinho </h1>
+                    <h3> <a href="#" class="adicionarmais"> Escolher mais produtos </a></h3>
+                </div>
+            </section>
+            <section class="comprar">
+                <div id="produtos">
+                    <table>
+                        <tr class="tituloTable">
+                            <th> <h3> Produto </h3></th>
+                            <th> <h3> Preço </h3></th>
+                            <th> <h3> Quantidade </h3></th>
+                            <th> <h3> Total </h3> </th>
+                            <th></th>
+                        </tr>
+            
+                        <div class="produtosTable">
+                            <tr>
+                                <td class="produtoComprar">
+                                    <img src="/ProjetoIntegrador/public/images/plants/severin-candrian-IgnTVnGkk4Y-unsplash.jpg"/>
+                                    <h4> Descrição do Produto</h4>
+                                </td>
+                                <td>109,90</td>
+                                <td><input type="number" value="1" min="1" max="9" step="1"></td>
+                                <td>109,90</td>
+                                <td> <a href="#" class="adicionarmais">
+                                    <img class="lixeiraImg" src="/ProjetoIntegrador/public/images/lixeira-aberta.png"/> </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="produtoComprar">
+                                    <img src="/ProjetoIntegrador/public/images/plants/severin-candrian-Rn1QlV1MDaw-unsplash.jpg"/>
+                                    <h4> Descrição do Produto</h4>
+                                </td>
+                                <td>109,90</td>
+                                <td><input type="number" value="1" min="1" max="9" step="1"></td>
+                                <td>109,90</td>
+                                <td> <a href="#" class="adicionarmais">
+                                    <img class="lixeiraImg" src="./img/lixeira-aberta.png"/> </a>
+                                </td>
+                            </tr>
+                        </div>
+                    </table>
+                </div>
+                <div id="entrega-valor">
+                    <div class="boxEntrega-valor">
+                        <h3> Entrega </h3>
+                        <label for="cep"> CEP </label>
+                        <div>
+                            <input type="text" id="cep" name="cep" required>
+                            <button type="submit"> Calcular</button>
+                        </div>
+                        <h6>Não sei meu CEP</h6>
+                    </div>
+                    <div class="boxEntrega-valor">
+                        <h3> Cupom | Vale-Presente </h3>
+                        <label for="cep"> Cupom </label>
+                        <div>
+                            <input type="text" id="cupom" name="cupom">
+                            <button type="submit"> Adicionar</button>
+                        </div>
+                    </div>
+                    <div class="boxEntrega-valor">
+                        <h3> Subtotal </h3>
+                        <div class="valores">
+                            <h5> 109,90</h5>
+                            <h5> -9,90</h5>
+                        </div>
+                    </div>
+                    <div class="boxEntrega-valor">
+                        <h3> Total </h3>
+                        <div class="valores">
+                        <h5> 100,00</h5>
+                        </div>
+                    </div>
+                    <button type="submit" id="finalizar"> Finalizar Compra </button>
+                </div>
+            </section>
+        </main>
+    
+
+        <%- include('partials/footer') %>
+    </body>
+</html>

@@ -7,7 +7,7 @@ const controller = {
 	},
 	carrinho: (req, res) => {
 		res.render('carrinho');
-	},,
+	},
 	cadastro: (req, res) => {
 		res.render('cadastro');
 	},
@@ -17,6 +17,9 @@ const controller = {
 		if(true) {
 			res.redirect('/');
 		}
+	},
+	compras: (req, res) => {
+		res.render('compras');
 	}
 }
 
