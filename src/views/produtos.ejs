@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Produtos'}) %>
+<link href="/css/product.css" rel="stylesheet" type="text/css">
+<body>
+
+    <%- include('partials/headerNavbar') %>
+    <div class="mini-menu">
+        <a href="/">Home</a>
+        <span class="mini-divisor-do-mini-menu">•</span>
+        <span class="pagina-atual">Produto Atual</span>
+        </div>
+     
+    <div class="produto-container">
+        <div class="imagem-produto-atual">
+            <img class="img-produto-atual" src="/images/plants/severin-candrian-y0C-eGur0nU-unsplash.jpg"/>
+        </div>
+        <div class="descricao-produto-atual">
+            <h3 class="titulo-produto-atual"> Titulo do Produto </h3>
+            <p class="preco-produto-atual"> R$ 000,00</p>
+            <div class="adicionar-carrinho">
+                <div class="adicionar-quantidade">
+                    <input id="quantidade" class="adicionar-quantidade-input" value="1" type="number" name="quantidade">
+                </div>
+                <div class="adicionar-produto">
+                    <button class="botao-comprar-produto-atual"> Comprar </button>
+                </div>
+            </div>
+            <p class="desc-produto-atual"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta tellus sit amet eros gravida consequat. Vivamus nunc metus, rhoncus in sapien nec, porta convallis lacus. Proin ornare, felis id rhoncus pretium, velit diam feugiat elit, vitae malesuada sem nisi nec neque. Sed bibendum, nunc vitae suscipit luctus, lectus eros viverra mauris, vel facilisis ipsum orci a erat. Praesent malesuada nunc sed eros luctus hendrerit. Quisque eget hendrerit lectus.  </p>
+            <div class="pesquisa-cep-container">
+                <input type="tel" name="zipcode" class="pesquisa-cep" placeholder="Pesquisar CEP" value="">
+                <button class="pesquisa-cep-botao"> Pesquisar </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="produtos-relacionados">
+        <p class="titulo-produtos-relacionados">Produtos Relacionados:</p>
+        <div class="produtosColecao">
+            <div class="produtosCol" id="colecao_primeiro"> 
+                <img class="img_colecao" src="/images/plants/severin-candrian-qoegZJ3ybOY-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+
+            <div class="produtosCol" id="colecao_segundo"> 
+                <img class="img_colecao" src="/images/plants/severin-candrian-qQZdmUzXjZA-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+
+            <div class="produtosCol" id="colecao_terceiro"> 
+                <img class="img_colecao" src="/images/plants/severin-candrian-SOhatM1jFLk-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+
+            <div class="produtosCol" id="colecao_quarto"> 
+                <img class="img_colecao" src="/images/plants/severin-candrian--11MmJRwCPo-unsplash.jpg"/>
+                <h3 class="titulo_colecao"> Titulo do Produto </h3>
+                <p class="desc_colecao"> Pequena descrição do produto </p>
+                <p class="preco_colecao"> R$ 000,00</p>
+                <button> Comprar </button>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+</body>

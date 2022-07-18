@@ -1,0 +1,123 @@
+.main-container {
+    margin: 2.5rem 0rem 2.5rem 0rem;
+}
+
+.carrinho-topo {
+    margin: 0rem 1rem 1.5rem 1rem;
+}
+
+.carrinho-meio {
+    display: flex;
+    justify-content: center;
+    margin: 0rem 2rem 0rem 2rem;
+}
+
+/* --- Esquerda do Carrinho ---*/
+
+.carrinho-esquerda {
+    border: 0.1rem solid #dbd7d6;
+    padding: 0.5rem;
+    margin-right: 2rem;
+    width: 40rem;
+}
+
+.carrinho-esquerda-topo {
+    border-bottom: 0.1rem solid #dbd7d6;
+    padding: 0.3rem 0rem 1rem 0rem;
+}
+
+.produtos-selecionados-aqui {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.img-produto-atual {
+    width: 6rem;
+}
+
+.adicionar-quantidade-input {
+    width: 4rem;
+}
+
+/* --- Direita do Carrinho ---*/
+
+.carrinho-direita {
+    border: 0.1rem solid #dbd7d6;
+    padding: 0.5rem;
+    margin-right: 2rem;
+}
+
+.pesquisa-cep-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.1rem solid #dbd7d6;
+    padding: 0.6rem 0rem 1rem 0rem;
+}
+
+.pesquisa-cep {
+    font-size: 0.8rem;
+    height: 2rem;
+    width: 10rem;
+}
+
+.pesquisa-cep-botao {
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+.cupom-container {
+    display: flex;
+    justify-content: center;
+}
+
+.cupom-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.1rem solid #dbd7d6;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.area-cupom {
+    font-size: 0.8rem;
+    height: 2rem;
+    width: 10rem;
+}
+
+.verificar-cupom {
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #dbd7d6;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.descontos {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #dbd7d6;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #dbd7d6;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.carrinho-direita-baixo {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.checkout-botao {
+    height: 2rem;
+    font-size: 1.2rem;
+}
