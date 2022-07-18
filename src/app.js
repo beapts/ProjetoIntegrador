@@ -13,7 +13,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 const cadastroRouter = require('./routes/cadastroRouter');  
 const carrinhoRouter = require('./routes/carrinhoRouter');  
-const homeRouter = require('./routes/homeRouter');  
+const mainRouter = require('./routes/mainRouter');  
 const listagemRouter = require('./routes/listagemRouter');  
 const loginRouter = require('./routes/loginRouter');  
 const painelRouter = require('./routes/painelRouter');  
@@ -21,7 +21,7 @@ const produtoRouter = require('./routes/produtoRouter');
 
 app.use('/cadastro', cadastroRouter);
 app.use('/carrinho', carrinhoRouter);
-app.use('/', homeRouter);
+app.use('/', mainRouter);
 app.use('/listagem', listagemRouter);
 app.use('/login', loginRouter);
 app.use('/painel', painelRouter);
