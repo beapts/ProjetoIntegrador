@@ -2,7 +2,7 @@ const loginController = {
     login: (req,res) => {
         const autenticada = true;
         if(true){
-            res.redirect('/home')
+            res.redirect('/')
         }
     }
 }
