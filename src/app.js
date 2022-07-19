@@ -22,7 +22,7 @@ const produtoRouter = require('./routes/produtoRouter');
 app.use('/cadastro', cadastroRouter);
 app.use('/carrinho', carrinhoRouter);
 app.use('/', mainRouter);
-app.use('/listagem', listagemRouter);
+//app.use('/listagem', listagemRouter);
 app.use('/login', loginRouter);
 app.use('/painel', painelRouter);
 app.use('/produto', produtoRouter);

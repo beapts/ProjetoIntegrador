@@ -1,6 +1,6 @@
 const carrinhoController = {
     carrinho: (req, res) => {
-		res.render('carrinho');
+		res.render('finalizarCompra');
 	}
 }
 
