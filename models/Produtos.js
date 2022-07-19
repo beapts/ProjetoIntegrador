@@ -23,5 +23,5 @@ module.exports = (sequelize, DataType) => {
     })
 
 
-    return Produtos
+    return Produtos;
 }
