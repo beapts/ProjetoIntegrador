@@ -1,1 +1,1 @@
-# ProjetoIntegrador 2 Sprint
+# ProjetoIntegrador - Ecommerce Plantinhas
