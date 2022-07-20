@@ -13,7 +13,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 const cadastroRouter = require('./routes/cadastroRouter');  
 const carrinhoRouter = require('./routes/carrinhoRouter');  
-const mainRouter = require('./routes/mainRouter');  
+//const mainRouter = require('./routes/mainRouter');  
 const listagemRouter = require('./routes/listagemRouter');  
 const loginRouter = require('./routes/loginRouter');  
 const painelRouter = require('./routes/painelRouter');  
