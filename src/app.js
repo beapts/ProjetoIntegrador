@@ -17,11 +17,12 @@ const mainRouter = require('./routes/mainRouter');
 const listagemRouter = require('./routes/listagemRouter');  
 const loginRouter = require('./routes/loginRouter');  
 const painelRouter = require('./routes/painelRouter');  
-const produtoRouter = require('./routes/produtoRouter');  
+const produtoRouter = require('./routes/produtoRouter');
+const homeController = require('./controllers/homeController');
 
 app.use('/cadastro', cadastroRouter);
 app.use('/carrinho', carrinhoRouter);
-app.use('/', mainRouter);
+app.get('/', homeController.home); ;
 //app.use('/listagem', listagemRouter);
 app.use('/login', loginRouter);
 app.use('/painel', painelRouter);

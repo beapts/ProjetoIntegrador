@@ -17,7 +17,7 @@ router.get('/painel', painelController.painel);
 router.get('/login', loginController.login);
 router.get('/listagem', listagemController.listagem);
 router.get('/carrinho', carrinhoController.carrinho);
-router.get('/cadastro', cadastroController.cadastro);
+//router.get('/cadastro', cadastroController.cadastro);
 router.get('/', homeController.home); 
 
 module.exports = router;

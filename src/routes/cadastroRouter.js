@@ -3,6 +3,6 @@ const router = express.Router();
 
 const cadastroController = require('../controllers/cadastroController');
 
-router.get('/cadastro', cadastroController.cadastro);
+router.get('/', cadastroController.cadastro);
 
 module.exports = router;
