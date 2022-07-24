@@ -1,6 +1,6 @@
 const homeController = {
     home: (req,res) => {
-    return res.render('home')
+     res.render('home')
     }
 }
 
