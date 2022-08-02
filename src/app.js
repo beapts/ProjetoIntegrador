@@ -23,7 +23,7 @@ const homeController = require('./controllers/homeController');
 app.use('/cadastro', cadastroRouter);
 app.use('/carrinho', carrinhoRouter);
 app.get('/', homeController.home); ;
-//app.use('/listagem', listagemRouter);
+app.use('/listagem', listagemRouter);
 app.use('/login', loginRouter);
 app.use('/painel', painelRouter);
 app.use('/produto', produtoRouter);

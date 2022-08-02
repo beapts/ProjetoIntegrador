@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Categorias'}) %>
+<link href="/css/categorias.css" rel="stylesheet" type="text/css">
+<body>
+
+    <%- include('partials/headerNavbar') %>
+    <div class="mini-menu">
+        <a href="/">Home</a>
+        <span class="mini-divisor-do-mini-menu">•</span>
+        <span class="pagina-atual">Categorias</span>
+        </div>
+    
+        <div class="todos-os-produtos">
+            <div class="categorias">
+                <div class="produtosCol" id="colecao_primeiro"> 
+                    <img class="img_colecao" src="/images/plants/severin-candrian-qQZdmUzXjZA-unsplash.jpg"/>
+                    <h3 class="titulo_colecao"> Mudas </h3>
+                    <button> Comprar </button>
+                </div>
+    
+                <div class="produtosCol" id="colecao_segundo"> 
+                    <img class="img_colecao" src="/images/plants/severin-candrian-qoegZJ3ybOY-unsplash.jpg"/>
+                    <h3 class="titulo_colecao"> Suportes & Acessórios </h3>
+                    <button> Comprar </button>
+                </div>
+    
+                <div class="produtosCol" id="colecao_terceiro"> 
+                    <img class="img_colecao" src="/images/plants/severin-candrian-SOhatM1jFLk-unsplash.jpg"/>
+                    <h3 class="titulo_colecao"> Vasos </h3>
+                    <button> Comprar </button>
+                </div>
+            </div>
+        </div>
+
+    <%- include('partials/footer') %>
+</body>
