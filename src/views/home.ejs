@@ -18,38 +18,37 @@
 
             <div class="produtosDestaques">
                 <div class="produtosDesc" id="DestaquesPrimeiro"> 
-                    <img class="img_destaques" src="/images/plants/severin-candrian-hIQDNawFoaM-unsplash.jpg"/>
-                    <h3 class="titulo_destaques"> Titulo do Produto </h3>
-                    <p class="desc_destaques"> Pequena descrição do produto </p>
-                    <p class="preco_destaques"> R$ 000,00</p>
-                    <button class="botaoDestaques"> Comprar </button>
+                    <img class="img_destaques" src="<%= produtos[0].produto_img %>"/>
+                    <h3 class="titulo_destaques"> <%= produtos[0].nome %> </h3>
+                    <p class="desc_destaques"> <%= produtos[0].descricao_curta %> </p>
+                    <p class="preco_destaques"> R$ <%= produtos[0].preco %></p>
+                    <a href="/produto/<%= produtos[0].id %>"> <button  class="botaoDestaques"> Comprar </button></a>
                 </div>
                 <div class="produtosDesc" id="DestaquesPrimeiro"> 
-                    <img class="img_destaques" src="/images/plants/severin-candrian-E1TcypjMSPE-unsplash.jpg"/>
-                    <h3 class="titulo_destaques"> Titulo do Produto </h3>
-                    <p class="desc_destaques"> Pequena descrição do produto </p>
-                    <p class="preco_destaques"> R$ 000,00</p>
-                    <button  class="botaoDestaques"> Comprar </button>
+                    <img class="img_destaques" src="<%= produtos[1].produto_img %>"/>
+                    <h3 class="titulo_destaques"> <%= produtos[1].nome %> </h3>
+                    <p class="desc_destaques"> <%= produtos[1].descricao_curta %> </p>
+                    <p class="preco_destaques"> R$ <%= produtos[1].preco %></p>
+                    <a href="/produto/<%= produtos[1].id %>"> <button  class="botaoDestaques"> Comprar </button></a>
                 </div>
                 <div class="produtosDesc" id="DestaquesPrimeiro"> 
-                    <img class="img_destaques" src="/images/plants/severin-candrian-R0d0JHaBR1g-unsplash.jpg"/>
-                    <h3 class="titulo_destaques"> Titulo do Produto </h3>
-                    <p class="desc_destaques"> Pequena descrição do produto </p>
-                    <p class="preco_destaques"> R$ 000,00</p>
-                    <button class="botaoDestaques"> Comprar </button>
+                    <img class="img_destaques" src="<%= produtos[2].produto_img %>"/>
+                    <h3 class="titulo_destaques"> <%= produtos[2].nome %> </h3>
+                    <p class="desc_destaques"> <%= produtos[2].descricao_curta %> </p>
+                    <p class="preco_destaques"> R$ <%= produtos[2].preco %></p>
+                    <a href="/produto/<%= produtos[2].id %>"> <button  class="botaoDestaques"> Comprar </button></a>
                 </div>
             </div>
         </div>
 
         <div class="importante"> 
             <div class="importanteProd">
-                <img class="img_importante" src="/images/plants/severin-candrian-Rn1QlV1MDaw-unsplash.jpg"/>
+                <img class="img_importante" src="<%= produtos[3].produto_img %>"/>
                 <div class="importante_infos">
-                    <h3 class="titulo_importante"> Titulo do Produto </h3>
-                    <p class="desc_importante"> Descrição mais longa do produto - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat et maxime quia ex, 
-                        eveniet a exercitationem libero molestiae quae ratione repellat repudiandae magni est aperiam neque minus! </p>
-                    <p class="preco_importante"> R$ 000,00</p>
-                    <button class="botaoImportante"> Comprar </button>
+                    <h3 class="titulo_importante"> <%= produtos[3].nome %></h3>
+                    <p class="desc_importante"> <%= produtos[3].descricao_longa %> </p>
+                    <p class="preco_importante"> R$ <%= produtos[3].preco%> </p>
+                    <a href="/produto/<%= produtos[3].id %>"> <button class="botaoImportante"> Comprar </button></a>
                 </div>
             </div>
         </div>
@@ -61,35 +60,35 @@
             </div>
             <div class="produtosColecao">
                 <div class="produtosCol" id="colecao_primeiro"> 
-                    <img class="img_colecao" src="/images/plants/severin-candrian-qoegZJ3ybOY-unsplash.jpg"/>
-                    <h3 class="titulo_colecao"> Titulo do Produto </h3>
-                    <p class="desc_colecao"> Pequena descrição do produto </p>
-                    <p class="preco_colecao"> R$ 000,00</p>
-                    <button> Comprar </button>
+                    <img class="img_colecao" src="<%= produtos[11].produto_img %>"/>
+                    <h3 class="titulo_colecao"> <%= produtos[11].nome %> </h3>
+                    <p class="desc_colecao"> <%= produtos[11].descricao_curta %> </p>
+                    <p class="preco_colecao"> R$ <%= produtos[11].preco %></p>
+                    <a href="/produto/<%= produtos[11].id %>"> <button> Comprar </button> </a>
                 </div>
 
                 <div class="produtosCol" id="colecao_segundo"> 
-                    <img class="img_colecao" src="/images/plants/severin-candrian-qQZdmUzXjZA-unsplash.jpg"/>
-                    <h3 class="titulo_colecao"> Titulo do Produto </h3>
-                    <p class="desc_colecao"> Pequena descrição do produto </p>
-                    <p class="preco_colecao"> R$ 000,00</p>
-                    <button> Comprar </button>
+                    <img class="img_colecao" src="<%= produtos[8].produto_img %>"/>
+                    <h3 class="titulo_colecao"> <%= produtos[8].nome %> </h3>
+                    <p class="desc_colecao"> <%= produtos[8].descricao_curta %> </p>
+                    <p class="preco_colecao"> R$ <%= produtos[8].preco %></p>
+                    <a href="/produto/<%= produtos[8].id %>"> <button> Comprar </button> </a>
                 </div>
 
                 <div class="produtosCol" id="colecao_terceiro"> 
-                    <img class="img_colecao" src="/images/plants/severin-candrian-SOhatM1jFLk-unsplash.jpg"/>
-                    <h3 class="titulo_colecao"> Titulo do Produto </h3>
-                    <p class="desc_colecao"> Pequena descrição do produto </p>
-                    <p class="preco_colecao"> R$ 000,00</p>
-                    <button> Comprar </button>
+                    <img class="img_colecao" src="<%= produtos[10].produto_img %>"/>
+                    <h3 class="titulo_colecao"> <%= produtos[10].nome %> </h3>
+                    <p class="desc_colecao"> <%= produtos[10].descricao_curta %> </p>
+                    <p class="preco_colecao"> R$ <%= produtos[10].preco %></p>
+                    <a href="/produto/<%= produtos[10].id %>"> <button> Comprar </button> </a>
                 </div>
 
                 <div class="produtosCol" id="colecao_quarto"> 
-                    <img class="img_colecao" src="/images/plants/severin-candrian--11MmJRwCPo-unsplash.jpg"/>
-                    <h3 class="titulo_colecao"> Titulo do Produto </h3>
-                    <p class="desc_colecao"> Pequena descrição do produto </p>
-                    <p class="preco_colecao"> R$ 000,00</p>
-                    <button> Comprar </button>
+                    <img class="img_colecao" src="<%= produtos[5].produto_img %>"/>
+                    <h3 class="titulo_colecao"> <%= produtos[5].nome %> </h3>
+                    <p class="desc_colecao"> <%= produtos[5].descricao_curta %></p>
+                    <p class="preco_colecao"> R$ <%= produtos[5].preco %></p>
+                    <a href="/produto/<%= produtos[5].id %>"> <button> Comprar </button> </a>
                 </div>
 
             </div>

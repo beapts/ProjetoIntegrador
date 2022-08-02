@@ -1,3 +1,5 @@
+const Usuario = require("./Usuario");
+
 module.exports = (sequelize, DataType) => {
     const Pedido = sequelize.define('Pedido', {
         id: {
@@ -33,7 +35,10 @@ module.exports = (sequelize, DataType) => {
         tableName: 'pedido',
         timestamps: false
     })
-
+    
+    /* Pedido.belongsTo(Usuario, 
+        {foreignKey: "id", as: "id_usuario_fk"}
+    ) */
 
     return Pedido;
 }

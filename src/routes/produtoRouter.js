@@ -7,5 +7,6 @@ const produtoController = require('../controllers/produtoController');
 //fazer as rotas e as views pra cada produto separamente depois, atenção aos produtos do banco de dados (yohanna)
 
 router.get('/', produtoController.produto);
+router.get('/:id', produtoController.visualizarProduto);
 
 module.exports = router;

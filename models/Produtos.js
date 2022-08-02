@@ -15,7 +15,16 @@ module.exports = (sequelize, DataType) => {
         },
         quantidade: {
             type: DataType.INTEGER,
-        }
+        },
+        produto_img: {
+            type: DataType.STRING,
+        },
+        descricao_curta: {
+            type: DataType.STRING,
+        },
+        descricao_longa: {
+            type: DataType.STRING,
+        },
 
     }, {
         tableName: 'produtos',

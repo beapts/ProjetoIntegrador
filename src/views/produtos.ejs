@@ -5,32 +5,30 @@
 <body>
 
     <%- include('partials/headerNavbar') %>
-    <div class="mini-menu">
-        <a href="/">Home</a>
-        <span class="mini-divisor-do-mini-menu">•</span>
-        <span class="pagina-atual">Produto Atual</span>
+    <section class="titulo">
+        <div>
+            <h1> Detalhes </h1>
+            <h3> <a href="#" class="adicionarmais"> Escolher mais produtos </a></h3>
         </div>
+    </section>
      
     <div class="produto-container">
         <div class="imagem-produto-atual">
-            <img class="img-produto-atual" src="/images/plants/severin-candrian-y0C-eGur0nU-unsplash.jpg"/>
+            <img class="img-produto-atual" src="<%= produto.produto_img %>"/>
         </div>
         <div class="descricao-produto-atual">
-            <h3 class="titulo-produto-atual"> Titulo do Produto </h3>
-            <p class="preco-produto-atual"> R$ 000,00</p>
+            <h3 class="titulo-produto-atual"> <%= produto.nome %> </h3>
+            <h5 class="subtitulo_produto"> <%= produto.descricao_curta %> </h3>
+            <p class="preco-produto-atual"> R$ <%= produto.preco %></p>
             <div class="adicionar-carrinho">
                 <div class="adicionar-quantidade">
                     <input id="quantidade" class="adicionar-quantidade-input" value="1" type="number" name="quantidade">
                 </div>
-                <div class="adicionar-produto">
+            </div>
+            <p class="desc-produto-atual"> <%= produto.descricao_longa %> </p>
+            <div class="adicionar-produto">
                     <button class="botao-comprar-produto-atual"> Comprar </button>
                 </div>
-            </div>
-            <p class="desc-produto-atual"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta tellus sit amet eros gravida consequat. Vivamus nunc metus, rhoncus in sapien nec, porta convallis lacus. Proin ornare, felis id rhoncus pretium, velit diam feugiat elit, vitae malesuada sem nisi nec neque. Sed bibendum, nunc vitae suscipit luctus, lectus eros viverra mauris, vel facilisis ipsum orci a erat. Praesent malesuada nunc sed eros luctus hendrerit. Quisque eget hendrerit lectus.  </p>
-            <div class="pesquisa-cep-container">
-                <input type="tel" name="zipcode" class="pesquisa-cep" placeholder="Pesquisar CEP" value="">
-                <button class="pesquisa-cep-botao"> Pesquisar </button>
-            </div>
         </div>
     </div>
 
