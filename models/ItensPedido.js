@@ -4,7 +4,8 @@ module.exports = (sequelize, DataType) => {
     const ItensPedido = sequelize.define('ItensPedido', {
         id: {
             type: DataType.INTEGER, 
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         id_pedido_fk: {
             type: DataType.INTEGER,
@@ -17,11 +18,18 @@ module.exports = (sequelize, DataType) => {
     }, {
         tableName: 'itens_pedido',
         timestamps: false
-    })
+    });
 
-    /* ItensPedido.belongsTo(Pedido, 
+    ItensPedido.associate = (models) => {
+        ItensPedido.belongsTo(models.Pedido, {
+            as: 'pedido',
+            foreignKey: 'id_pedido_fk'
+         })
+        }
+
+     /*  ItensPedido.belongsTo(Pedido, 
         {foreignKey: "id", as: "id_usuario_fk"}
-    )  */
+    )   */ 
 
     return ItensPedido;
 }

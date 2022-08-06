@@ -20,15 +20,18 @@
             <h3 class="titulo-produto-atual"> <%= produto.nome %> </h3>
             <h5 class="subtitulo_produto"> <%= produto.descricao_curta %> </h3>
             <p class="preco-produto-atual"> R$ <%= produto.preco %></p>
-            <div class="adicionar-carrinho">
-                <div class="adicionar-quantidade">
-                    <input id="quantidade" class="adicionar-quantidade-input" value="1" type="number" name="quantidade">
+
+            <form class="adicionarProduto" action="/carrinho/adicionar/<%= produto.id%>" method="post">
+                <div class="adicionar-carrinho">
+                    <div class="adicionar-quantidade">
+                        <input id="quantidade" class="adicionar-quantidade-input" value="1" type="number" name="quantidade">
+                    </div>
                 </div>
-            </div>
-            <p class="desc-produto-atual"> <%= produto.descricao_longa %> </p>
-            <div class="adicionar-produto">
-                    <button class="botao-comprar-produto-atual"> Comprar </button>
+                <p class="desc-produto-atual"> <%= produto.descricao_longa %> </p>
+                <div class="adicionar-produto">
+                        <button class="botao-comprar-produto-atual" type="submit"> Comprar </button> 
                 </div>
+            </form>
         </div>
     </div>
 

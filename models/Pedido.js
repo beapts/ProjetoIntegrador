@@ -4,7 +4,8 @@ module.exports = (sequelize, DataType) => {
     const Pedido = sequelize.define('Pedido', {
         id: {
             type: DataType.INTEGER, 
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         id_usuario_fk: {
             type: DataType.INTEGER,
@@ -35,7 +36,17 @@ module.exports = (sequelize, DataType) => {
         tableName: 'pedido',
         timestamps: false
     })
-    
+
+   /*  Pedido.hasMany(ItensPedido,
+        {foreignKey: "id_pedido_fk", as: "itens"} )  */
+
+    Pedido.associate = (models) => {
+        Pedido.hasMany(models.ItensPedido, {
+            as: 'itens',
+            foreignKey: 'id_pedido_fk'
+         })
+        }
+
     /* Pedido.belongsTo(Usuario, 
         {foreignKey: "id", as: "id_usuario_fk"}
     ) */

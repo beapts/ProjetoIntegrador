@@ -2,7 +2,8 @@ module.exports = (sequelize, DataType) => {
     const PagamentoPedido = sequelize.define('PagamentoPedido', {
         id: {
             type: DataType.INTEGER, 
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         id_pedido_fk: {
             type: DataType.INTEGER,
