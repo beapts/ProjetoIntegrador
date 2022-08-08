@@ -9,7 +9,7 @@
             <section class="titulo">
                 <div>
                     <h1> Meu Carrinho </h1>
-                    <h3> <a href="#" class="adicionarmais"> Escolher mais produtos </a></h3>
+                    <h3> <a href="/"  class="adicionarmais"> Escolher mais produtos </a></h3>
                 </div>
             </section>
             <section class="comprar">
@@ -24,18 +24,25 @@
                         </tr>
             
                         <div class="produtosTable">
+                            <%
+                              carrinho.forEach(carrinho =>{ 
+                              
+                            %>
                             <tr>
                                 <td class="produtoComprar">
-                                    <img src="images/plants/severin-candrian-IgnTVnGkk4Y-unsplash.jpg"/>
-                                    <h4> Descrição do Produto</h4>
+                                    <img src="<%= carrinho.produto_img %>"/>
+                                    <h4> <%= carrinho.nome_produto %></h4>
                                 </td>
-                                <td>109,90</td>
-                                <td><input type="number" value="1" min="1" max="9" step="1"></td>
-                                <td>109,90</td>
-                                <td> <a href="#" class="adicionarmais">
-                                    <img class="lixeiraImg" src="images/lixeira-aberta.png"/> </a>
+                                <td> R$ <%= carrinho.preco %></td>
+                                <td><input type="number" value="<%= carrinho.quantidade %>" min="1" max="9" step="1"></td>
+                                <td> R$ <%= (carrinho.preco)*(carrinho.quantidade) %></td>
+                                <td> 
+                                    <form action="/carrinho/deletar/<%= carrinho.id %>?_method=DELETE" method="post">
+                                        <button type="submit"> Excluir </button>
+                                    </form>
                                 </td>
                             </tr>
+                            <% }) %>
                         </div>
 
                     </table>
@@ -61,14 +68,18 @@
                     <div class="boxEntrega-valor">
                         <h3> Subtotal </h3>
                         <div class="valores">
-                            <h5> 109,90</h5>
-                            <h5> -9,90</h5>
+                            <% let controladora = 0;
+                              carrinho.forEach(carrinho =>{ 
+                              controladora = parseInt(controladora)+ parseInt(carrinho.preco) 
+                            %>
+                            <h5> R$ <%= carrinho.preco %> </h5>
+                            <% }) %>
                         </div>
                     </div>
                     <div class="boxEntrega-valor">
                         <h3> Total </h3>
                         <div class="valores">
-                        <h5> 100,00</h5>
+                        <h5> R$ <%= controladora %> </h5>
                         </div>
                     </div>
                     <button type="submit" id="finalizar"> Finalizar Compra </button>

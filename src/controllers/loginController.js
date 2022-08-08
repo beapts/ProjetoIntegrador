@@ -1,9 +1,10 @@
 const loginController = {
     login: (req,res) => {
-        const autenticada = true;
-        if(true){
+        const autenticada = false;
+        if (autenticada == true){
             res.redirect('/')
         }
+        res.render('login')
     }
 }
 
