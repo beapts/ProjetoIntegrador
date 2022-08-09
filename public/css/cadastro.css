@@ -3,6 +3,16 @@
     justify-content: center;
 }
 
+#erro-form {
+    margin-bottom: 2rem;
+    border: solid 0.1rem red;
+    margin: 1rem;
+}
+
+.sem-erro-form {
+    display: none;
+}
+
 .criar-conta {
     display: flex;
     flex-direction: column;
@@ -11,7 +21,7 @@
     border: 0.1rem solid #dbd7d6;
     background-color: #f0f2f5;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 4px rgba(49, 38, 38, 0.1), 0 8px 16px rgb(0 0 0 / 10%);
 }
 
 .criar-conta-topo {

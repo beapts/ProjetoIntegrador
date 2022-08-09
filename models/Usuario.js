@@ -8,9 +8,6 @@ module.exports = (sequelize, DataType) => {
         nome: {
             type: DataType.STRING,
         },
-        data_nasc: {
-            type: DataType.DATE,
-        },
         cpf: {
             type: DataType.STRING,
         },

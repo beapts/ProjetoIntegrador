@@ -1,9 +1,26 @@
+const db = require('../../models');
+
 const loginController = {
-    login: (req,res) => {
-        const autenticada = true;
-        if(true){
-            res.redirect('/')
-        }
+    loginForm: (req, res) => {
+        res.render('login')
+    },
+    loginUsuario: async (req, res) => {
+        const { email, senha } = req.body;
+        try {
+            const findUser = await db.Usuario.findOne({
+                where: {
+                   email,
+                   senha
+                }
+            })
+
+            if (findUser != null) {
+                res.redirect('/')
+            }
+            return res.render('perfil')
+            
+
+        } catch (error) { console.log(error.message) }
     }
 }
 

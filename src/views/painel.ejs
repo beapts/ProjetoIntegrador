@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Painel do Usuário'}) %>
+<link href="/css/painel.css" rel="stylesheet" type="text/css">
+    <body>
+        <%- include('partials/headerNavbar') %>
+        <section class="titulo">
+            <div>
+                <h1> Painel do Usuário </h1>
+                <h3> <a href="/"> Página Principal </a></h3>
+            </div>
+        </section>
+        <div class="main-container">
+    
+            <section class="left-container">
+                <div class="titulo-sidebar">
+                    <h3>Minha Conta</h3>
+                </div>
+                <div class="sidebar-info">
+                    <p><a href="/#" id="">Página Inicial </a></p>
+                    <p><a href="/#" id="">Editar Conta </a></p>
+                    <p><a href="/#" id="">Deletar Conta </a></p>
+                </div>
+                
+            </section>
+            <section class="right-container">
+                <div class="titulo-info">
+                    <h3>Dados Pessoais</h3>
+                </div>
+                <div class="menu-info">
+                    <div class="user-info">
+                        <p>Nome Completo: Maria Silva Barros</p>
+                        <p>CPF: 123.456.789.00</p>
+                        <p>E-mail: testeteste@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <%- include('partials/footer') %>
+    </body>
+    <script src="/public/javascripts/script.js"></script>
+</html>

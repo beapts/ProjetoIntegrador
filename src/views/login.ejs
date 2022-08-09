@@ -9,50 +9,21 @@
         <div class="container">
             <div class="containerRegistro">
                 <h2 class="texto-entrar">ENTRAR</h2>
-                <form class="form">
-                    <label class="label-input">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Digite o seu email">
-                    </label>
-                    <label class="label-input">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Digite a sua senha">
-                    </label>
+                <form class="formulario-login" method="post" action="/login/loginusuario">
+                    <input class="email" type="email" id="email" name="email" placeholder="email" required ><br>
+                    <input class="senha" type="current-password" id="senha" name="senha" placeholder="senha" required><br>
+                    <p class="texto-conta">Não tem uma conta?
+                    <a href="/cadastro" class="cadastroLink"><b>Cadastre-se</b></a>
+                    </p> 
+                    <button class="botao-login" type="submit"> Entrar</button>
                 </form>
-                <button class="btn btn-entrar">Entrar</button>
-
-                <div class="criar-conta">
-                    <h2 class="texto">Conectar com</h2>
-                    <div class="social-media">
-                        <ul class="lista-social-media">
-
-                            <a class="link-social-media" href="#">
-                                <li class="item-social-media">
-                                    <i class="fab fa-facebook-f"></i>        
-                                </li>
-                            </a>
-
-                            <a class="link-social-media" href="#">
-                                <li class="item-social-media">
-                                    <i class="fab fa-google-plus-g"></i>        
-                                </li>
-                            </a>
-
-                            <a class="link-social-media" href="#">
-                                <li class="item-social-media">
-                                    <i class="fab fa-linkedin-in"></i>        
-                                </li>
-                            </a>
-
-                        </ul>
-                    </div>
-                    <h2 class="texto-conta">Você ainda não tem uma conta?</h2>
-                        <button class="btn btn-criar">Criar conta</button>
-                </div>  
+                
             </div>
         </div>
         <%- include('partials/footer') %>
 </main>
 
 
-<body
+</body>
+
+</html>

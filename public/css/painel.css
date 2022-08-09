@@ -1,0 +1,53 @@
+/* --- Mini-menu ---*/
+.titulo{
+    margin: auto;
+    width: 90%;
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.titulo h1 {
+    font-size: 1.8rem;
+}
+
+.titulo h3 {
+    font-size: 1rem;
+    color: lightslategray;
+    text-decoration: none;
+    margin-bottom: 0.4rem;
+}
+
+/* main-container */
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    margin: auto
+}
+
+/* Sidebar */
+
+.titulo-sidebar {
+    margin: auto;
+    width: 90%;
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.sidebar-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* User Info */
+
+.right-container {
+    width: 40rem;
+}
+
+.titulo-info {
+    margin: auto;
+    width: 90%;
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
+}

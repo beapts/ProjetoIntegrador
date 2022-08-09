@@ -5,23 +5,29 @@
     <body>
         <%- include('partials/headerNavbar') %>
         <div class="main-container">
+            
             <div class="criar-conta">
                 <div class="criar-conta-topo">
                     <h2>CRIAR CONTA</h2>
                 </div>
+                <div class="erro-form">
+                    <ul></ul>
+                </div>
                 <div class="criar-conta-meio">
-                    <form action="/" method="POST" class="form-cadastro">
+                    <form action="/cadastro/cadastrarusuario" method="POST" id="formulario-cadastro" class="form-cadastro">
                         <p><label for="nome">Nome Completo:</label></p>
-                        <p><input type="text" name="nome" id="nome"></p>
+                        <p><input type="text" name="nome" id="nome-cadastro" pattern="[a-zA-Z]+" required></p>
                         <p><label for="email">E-mail:</label></p>
-                        <p><input type="email" name="email" id="email"></p>
+                        <p><input type="email" name="email" id="email-cadastro" pattern="(\w\.?)+@[\w\.-]+\.\w{2,})" required></p>
+                        <p><label for="cpf">Digite um CPF no formato: xxx.xxx.xxx-xx</label></p>
+                        <p><input type="text" name="cpf" id="cpf-cadastro" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" required></p>
                         <p><label for="senha">Senha:</label>
-                        <p><input type="password" name="senha" id="senha"></p>
-                        <p><label for="confirmacao">Confirmar senha:</label>
-                        <p><input type="password" name="confirmacao" id="confirmacao"></p>
+                        <p><input type="new-password" name="senha" id="senha-cadastro" required></p>
+                        <p><label for="confirmacao-senha">Confirmar senha:</label>
+                        <p><input type="new-password" name="confirmacao-senha-cadastro" id="confirmacao-senha" required></p>
                         <div class="criar-conta-baixo">
                             <a href="/">Voltar</a>
-                            <button class="botao-cadastro"> Enviar </button>
+                            <button class="botao-cadastro" type="submit"> Enviar </button>
                         </div>
                     </form>
                 </div>
@@ -29,4 +35,5 @@
         </div>
         <%- include('partials/footer') %>
     </body>
+    <script src="/public/javascripts/script.js"></script>
 </html>
