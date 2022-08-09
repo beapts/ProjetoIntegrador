@@ -16,8 +16,10 @@ module.exports = (sequelize, DataType) => {
         },
         quantidade: {
             type: DataType.INTEGER,
-        }
-
+        },
+        produto_img: {
+            type: DataType.STRING,
+        },
     }, {
         tableName: 'carrinho',
         timestamps: false

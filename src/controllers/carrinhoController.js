@@ -1,16 +1,14 @@
 
 const { Produtos } = require('../../models');
-const {Carrinho} = require('../../models');
+const { Carrinho } = require('../../models');
 
 
 
 const carrinhoController = {
     carrinho: async (req, res) => {
-		//let pedido = await Pedido.findAll();
-		//let itens = await ItensPedido.findAll();
-
-		/* res.render('finalizarCompra', {pedido, itens}); */
-		res.render('finalizarCompra');
+		let carrinho = await Carrinho.findAll();
+		let produtos = await Carrinho.findAll();
+		res.render('finalizarCompra', {carrinho, produtos});
 	},
 	adicionarItem: async (req, res) => {
 		let {id} = req.params
@@ -24,12 +22,22 @@ const carrinhoController = {
 			id_produto: produto.id,
 			nome_produto: produto.nome, 
 			preco:produto.preco,
-			quantidade: '1'
+			quantidade: '1',
+			produto_img: produto.produto_img
 		}); 
 
 
 		res.redirect('/carrinho');
 	
+	},
+	deletar: async (req, res) => {
+		let {id} = req.params
+		await Carrinho.destroy({
+			where: {
+				id: id
+			}
+		});
+		res.redirect('/carrinho');
 	}
 }
 
