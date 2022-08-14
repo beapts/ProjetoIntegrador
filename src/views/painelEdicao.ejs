@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <%- include('partials/head', {title: 'Painel do Usuário'}) %>
 <link href="/css/painel.css" rel="stylesheet" type="text/css">
+<link href="/css/painelEdicao.css" rel="stylesheet" type="text/css">
 
     <body>
         <%- include('partials/headerNavbar') %>
@@ -14,25 +15,26 @@
         <div class="main-container">
              <div class="submenu">
                 <a id= "menuAtual" href="#"> <h4> Meus dados </h4> </a>
-                <a href="/painel/meuspedidos/<%= usuario.id %>" id="menuSecundario"> <h4>Meus pedidos </h4></a>
+                <a href="#" id="menuSecundario"> <h4>Meus pedidos </h4></a>
              </div>
 
              <div class="divFormulario">
-                <form action="" id="formularioUsuario">
+                <form action="/painel/painelEdicao/1?_method=PUT" method="post" id="formularioUsuario">
                     <label> Nome: </label>
-                        <input type="text" name="nome" id="nome" pattern="[a-zA-Z]+" disabled="disabled" value="<%= usuario.nome %>">
+                        <input type="text" name="nome" id="nome" value="<%= usuario.nome %>">
 
                     <label> E-mail:</label>
-                        <input type="email" name="email" id="email" pattern="(\w\.?)+@[\w\.-]+\.\w{2,})" disabled="disabled" value="<%= usuario.email %>">
+                        <input type="email" name="email" id="email" pattern="(\w\.?)+@[\w\.-]+\.\w{2,})" value="<%= usuario.email %>">
                     
                     <label> CPF:</label>
-                        <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" disabled="disabled" value="<%= usuario.cpf %>">
+                        <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" value="<%= usuario.cpf %>">
                     
                     <label> Data Nascimento:</label>
-                        <input type="date" name="dataNasc" id="dataNasc"  disabled="disabled" value="<%= usuario.data_nasc %>">
+                        <input type="date" name="data-nasc" id="data-nasc"  value="<%= usuario.data_nasc %>">
                     
+                    <button type="submit" id="botaoEditar"> Salvar </button>
                 </form>
-                <a href="/painel/painelEdicao/<%= usuario.id %>""><button id="botaoEditar"> Editar </button></a>
+            
              </div>
 
         </div>

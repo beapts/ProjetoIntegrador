@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Painel do Usuário'}) %>
+<link href="/css/painel.css" rel="stylesheet" type="text/css">
+
+    <body>
+        <%- include('partials/headerNavbar') %>
+        <section class="titulo">
+            <div>
+                <h1> Minha Conta </h1>
+                <h3> <a href="/"> Voltar para home </a></h3>
+            </div>
+        </section>
+        <div class="main-container">
+             <div class="submenu">
+                <a id= "menuSecundario" href="/painel/1"> <h4> Meus dados </h4> </a>
+                <a href="#" id="menuAtual"> <h4>Meus pedidos </h4></a>
+             </div>
+
+             <h1> Tela de pedidos</h1>
+             
+
+        </div>
+        <%- include('partials/footer') %>
+    </body>
+    <script src="/public/javascripts/script.js"></script>
+</html>

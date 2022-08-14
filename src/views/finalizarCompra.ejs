@@ -34,10 +34,15 @@
                                     <h4> <%= carrinho.nome_produto %></h4>
                                 </td>
                                 <td> R$ <%= carrinho.preco %></td>
-                                <td><input type="number" value="<%= carrinho.quantidade %>" min="1" max="9" step="1"></td>
-                                <td> R$ <%= (carrinho.preco)*(carrinho.quantidade) %></td>
+                                <td>
+                                    <form action="/carrinho/atualizar/<%= carrinho.id %>?_method=PUT" method="post" class="botaoCarrinho" id="formularioquantidade">
+                                        <input type="number" value="<%= carrinho.quantidade %>" min="1" max="9" step="1" name="quantidade"> 
+                                        <button type="submit"> Att </button>
+                                    </form>
+                                </td>
+                                <td> R$ <%= ((carrinho.preco)*(carrinho.quantidade)).toFixed(2) %></td>
                                 <td> 
-                                    <form action="/carrinho/deletar/<%= carrinho.id %>?_method=DELETE" method="post">
+                                    <form action="/carrinho/deletar/<%= carrinho.id %>?_method=DELETE" method="post" class="botaoCarrinho">
                                         <button type="submit"> Excluir </button>
                                     </form>
                                 </td>
@@ -70,19 +75,19 @@
                         <div class="valores">
                             <% let controladora = 0;
                               carrinho.forEach(carrinho =>{ 
-                              controladora = parseInt(controladora)+ parseInt(carrinho.preco) 
+                              controladora = parseInt(controladora)+ (parseInt(carrinho.preco)*parseInt(carrinho.quantidade))
                             %>
-                            <h5> R$ <%= carrinho.preco %> </h5>
+                            <h5> R$ <%= ((carrinho.preco)*(carrinho.quantidade)).toFixed(2)%> </h5>
                             <% }) %>
                         </div>
                     </div>
                     <div class="boxEntrega-valor">
                         <h3> Total </h3>
                         <div class="valores">
-                        <h5> R$ <%= controladora %> </h5>
+                        <h5> R$ <%= controladora.toFixed(2) %> </h5>
                         </div>
                     </div>
-                    <button type="submit" id="finalizar"> Finalizar Compra </button>
+                    <button type="submit" id="finalizar"> <a href="/carrinho/finalizar/1"> Finalizar Compra </a> </button>
                 </div>
             </section>
         </main>

@@ -36,9 +36,10 @@ table{
     text-align: left;
 }
 
-th, td{
-    padding: 0.2rem 3rem 0.4rem 0rem;
+th{
+    padding: 0.2rem 1rem 0.4rem 0rem;
 }
+
 
 .produtoComprar{
     display: flex;

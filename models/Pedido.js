@@ -16,8 +16,8 @@ module.exports = (sequelize, DataType) => {
         valor_total: {
             type: DataType.FLOAT,
         },
-        id_pagamento_fk: {
-            type: DataType.INTEGER,
+        forma_pagamento: {
+            type: DataType.STRING,
         },
         endereco_entrega: {
             type: DataType.STRING,
@@ -27,9 +27,6 @@ module.exports = (sequelize, DataType) => {
         },
         status_pedido: {
             type: DataType.STRING,
-        },
-        data_finalizacao: {
-            type: DataType.DATE,
         },
 
     }, {
