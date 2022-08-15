@@ -1,3 +1,80 @@
+/* --- Mini-menu ---*/
+.titulo{
+    margin: auto;
+    width: 90%;
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.titulo h1 {
+    font-size: 1.8rem;
+}
+
+.titulo h3 {
+    font-size: 1rem;
+    color: lightslategray;
+    text-decoration: none;
+    margin-bottom: 0.4rem;
+}
+
+/* Caixa Main */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+#menuAtual, .divConteudo {
+    background-color: rgb(241, 240, 240);
+}
+
+.submenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.submenu a{
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem 0.8rem 0px 0px;
+}
+
+.divConteudo{
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    /* padding: 1rem; */
+}
+
+/*Caixa de pedido*/
+
+.caixaPedido{
+    border: 1px solid grey;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+}
+
+.infoPedido{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    margin: 0.3rem 0rem 1rem 0rem;
+}
+
+.statusPedido{
+    color: grey;
+}
+
+
+
+
+
+/*CSS PADRÂO*/
 /* --- Reset --- */
 * {
     margin: 0;

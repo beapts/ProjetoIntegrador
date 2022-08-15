@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <%- include('partials/head', {title: 'Painel do Usuário'}) %>
 <link href="/css/painel.css" rel="stylesheet" type="text/css">
-<link href="/css/painelEdicao.css" rel="stylesheet" type="text/css">
 
     <body>
         <%- include('partials/headerNavbar') %>
@@ -29,9 +28,7 @@
                     <label> CPF:</label>
                         <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" value="<%= usuario.cpf %>">
                     
-                    <label> Data Nascimento:</label>
-                        <input type="date" name="data-nasc" id="data-nasc"  value="<%= usuario.data_nasc %>">
-                    
+                
                     <button type="submit" id="botaoEditar"> Salvar </button>
                 </form>
             
