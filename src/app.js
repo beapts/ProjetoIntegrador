@@ -4,10 +4,17 @@ const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const app = express();
+const bcrypt = require('bcryptjs');
+const { hash } = require("bcrypt");
 
+app.use(session({
+    secret: 'plantinhas',
+    resave: false,
+    saveUninitialized: true,
+}))
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
-//app.use(cookieParser);
+app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 

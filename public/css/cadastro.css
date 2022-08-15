@@ -3,14 +3,10 @@
     justify-content: center;
 }
 
-#erro-form {
-    margin-bottom: 2rem;
-    border: solid 0.1rem red;
-    margin: 1rem;
-}
-
-.sem-erro-form {
-    display: none;
+.erro-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .criar-conta {

@@ -8,6 +8,9 @@ window.addEventListener('load', function() {
 
     formularioCadastro.addEventListener('submit', function(event){
         let mensagemErroForm = []
+        event.preventDefault();
+        console.log("chegou em submit")
+       try {
         if (inputNome.value === "") {
             mensagemErroForm.push("o campo nome não pode estar vazio")
         } else if (inputNome.value.length < 3) {
@@ -22,9 +25,12 @@ window.addEventListener('load', function() {
         if (inputConfirmacaoSenha.value === "") {
             mensagemErroForm.push("o campo confirmação de senha não pode estar vazio")
         }
-        if (mensagemErroForm.length > 0) {
-            event.preventDefault();
+        if (mensagemErroForm.length == 0) {
+            formularioCadastro.submit()
         }
+       } catch (error) {
+        console.log(error)
+       }
         let listaDeErros = document.querySelector("div.erro-form ul");
         for (let i = 0; i < mensagemErroForm.length; i++ ) {
             listaDeErros.innerHTML += "<li>"+mensagemErroForm[i]+"</li>";
