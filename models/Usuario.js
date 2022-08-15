@@ -16,11 +16,7 @@ module.exports = (sequelize, DataType) => {
         },
         cpf: {
             type: DataType.STRING,
-        },
-        data_nasc: {
-            type: DataType.DATE,
         }
-        
 
     }, {
         tableName: 'usuario',

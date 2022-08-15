@@ -14,46 +14,63 @@ const carrinhoController = {
 	},
 	adicionarItem: async (req, res) => {
 		let {id} = req.params
-		let produto = await Produtos.findOne({
-			where: {
-				id
-			}
-		});
-		
-		await Carrinho.create({
-			id_produto: produto.id,
-			nome_produto: produto.nome, 
-			preco:produto.preco,
-			quantidade: '1',
-			produto_img: produto.produto_img
-		}); 
 
+		try {
+			let produto = await Produtos.findOne({
+				where: {
+					id
+				}
+			});
+			
+			await Carrinho.create({
+				id_produto: produto.id,
+				nome_produto: produto.nome, 
+				preco:produto.preco,
+				quantidade: '1',
+				produto_img: produto.produto_img
+			});
+			
+			res.redirect('/carrinho');
+		} catch (error) {
+			console.log(error)
+			res.send('Algo deu errado, contate o nosso suporte')
+		}
 
-		res.redirect('/carrinho');
 	
 	},
 	deletar: async (req, res) => {
 		let {id} = req.params
-		await Carrinho.destroy({
-			where: {
-				id: id
-			}
-		});
-		res.redirect('/carrinho');
+
+		try {
+			await Carrinho.destroy({
+				where: {
+					id: id
+				}
+			});
+			res.redirect('/carrinho');
+		} catch (error) {
+			console.log(error)
+			res.send('Algo deu errado, contate o nosso suporte')
+		}
 	},
 	atualizar: async (req, res) => {
 		let {id} = req.params
 		let {quantidade} = req.body
 		
-		await Carrinho.update({
-			quantidade: quantidade
-			},
-			{
-			where: {id: id}
-			}
-		);
+		try { 
+			await Carrinho.update({
+				quantidade: quantidade
+				},
+				{
+				where: {id: id}
+				}
+			);
 
-		res.redirect('/carrinho');
+			res.redirect('/carrinho');
+		} catch (error) {
+			console.log(error)
+			res.send('Algo deu errado, contate o nosso suporte')
+		}
 	},
 	finalizarpedido: async (req,res) => {
 		let carrinho = await Carrinho.findAll();
@@ -79,17 +96,18 @@ const carrinhoController = {
 			let numeroPedido = pedido.id
 			
 			
-			/*  ---- VER COM A LAÍS AMANHÃ
 			for (let i = 0; i < carrinho.length ; i++) {
-				console.log(carrinho.id_produto) 
+				console.log(carrinho[i].id_produto) 
 			
 				 await ItensPedido.create({
 					id_pedido_fk: numeroPedido,
-					item_fk: carrinho.id_produto
+					item_fk: carrinho[i].id_produto,
+					quantidade: carrinho[i].quantidade
 				}) 
 			}  
-			*/
-
+			
+/* 			await Carrinho.destroy()
+ */
 			res.render('pedidoFinalizado')
 		}
 		catch (error){
@@ -100,10 +118,5 @@ const carrinhoController = {
 	}
 }
 
-/* const carrinhoController = {
-    carrinho: (req, res) => {
-		res.render('carrinho');
-	}
-} */
 
 module.exports = carrinhoController

@@ -28,9 +28,6 @@
                     <label> CPF:</label>
                         <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" disabled="disabled" value="<%= usuario.cpf %>">
                     
-                    <label> Data Nascimento:</label>
-                        <input type="date" name="dataNasc" id="dataNasc"  disabled="disabled" value="<%= usuario.data_nasc %>">
-                    
                 </form>
                 <a href="/painel/painelEdicao/<%= usuario.id %>""><button id="botaoEditar"> Editar </button></a>
              </div>

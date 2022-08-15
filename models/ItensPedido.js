@@ -13,6 +13,9 @@ module.exports = (sequelize, DataType) => {
         item_fk: {
             type: DataType.INTEGER,
         },
+        quantidade: {
+            type: DataType.INTEGER,
+        }
         
 
     }, {

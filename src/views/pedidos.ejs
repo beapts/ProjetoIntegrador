@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <%- include('partials/head', {title: 'Painel do Usuário'}) %>
-<link href="/css/painel.css" rel="stylesheet" type="text/css">
+<link href="/css/pedidos.css" rel="stylesheet" type="text/css">
 
     <body>
         <%- include('partials/headerNavbar') %>
@@ -12,13 +12,31 @@
             </div>
         </section>
         <div class="main-container">
-             <div class="submenu">
+            <div class="submenu">
                 <a id= "menuSecundario" href="/painel/1"> <h4> Meus dados </h4> </a>
                 <a href="#" id="menuAtual"> <h4>Meus pedidos </h4></a>
-             </div>
-
-             <h1> Tela de pedidos</h1>
+            </div>
              
+            <div class="divConteudo"> 
+                <%
+                pedidos.forEach(pedidos =>{        
+                %>
+                <div class="caixaPedido">
+                    <h3> Pedido Nº <%= pedidos.id %> </h3>
+                    <p class="statusPedido"> <%= pedidos.status_pedido %> </p>
+
+                    <div class="infoPedido">
+                        <p> <strong> Quantidade de Itens: </strong> <%= pedidos.quantidade_itens %> </p>
+                        <p> <strong> Valor total: </strong> <%= pedidos.valor_total %> </p>
+                        <p> <strong> Data de entrega: </strong> 16/08/2022 </p>
+                    </div>
+
+                    <a href="/painel/meuspedidos/pedido/<%= pedidos.id %>"> <button> Ver itens </button> </a>
+                </div>
+                <% }) %>
+            </div>
+             
+            
 
         </div>
         <%- include('partials/footer') %>

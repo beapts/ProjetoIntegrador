@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head', {title: 'Painel do Usuário'}) %>
+<link href="/css/pedidos.css" rel="stylesheet" type="text/css">
+<link href="/css/pedidosItens.css" rel="stylesheet" type="text/css">
+
+
+    <body>
+        <%- include('partials/headerNavbar') %>
+        <section class="titulo">
+            <div>
+                <h1> Minha Conta </h1>
+                <h3> <a href="/"> Voltar para home </a></h3>
+            </div>
+        </section>
+        <div class="main-container">
+            <div class="submenu">
+                <a id= "menuSecundario" href="/painel/1"> <h4> Meus dados </h4> </a>
+                <a href="#" id="menuAtual"> <h4>Meus pedidos </h4></a>
+            </div>
+             
+            <div class="divConteudo"> 
+
+                <div class="caixaPedido">
+                    <h3> Pedido Nº <%= pedido.id %> </h3>
+                    <p class="statusPedido"> <%= pedido.status_pedido %> </p>
+
+                    <div class="infoPedido">
+                        <p> <strong> Quantidade de Itens: </strong> <%= pedido.quantidade_itens %> </p>
+                        <p> <strong> Valor total: </strong> <%= pedido.valor_total %> </p>
+                        <p> <strong> Data de entrega: </strong> 16/08/2022 </p>
+                    </div>
+
+                    <table>
+                        <tr class="tituloTable">
+                            <th> <h3> Produto </h3></th>
+                            <th> <h3> Preço </h3></th>
+                            <th> <h3> Quantidade </h3></th>
+                            <th> <h3> Total </h3></th>
+                        </tr>
+                        <% itens.map(itens =>{ 
+                            let x = (itens.item_fk)-1 %>
+                            
+                        <tr>
+                            <td class="DescicaoProduto">
+                                <img src="<%= produtos[x].produto_img %>"/>
+                                <h4> <%= produtos[x].nome %></h4>
+                            </td>
+                            <td> R$ <%= produtos[x].preco %></td>
+                            <td> <%= itens.quantidade %></td>
+                            <td> R$ <%= (produtos[x].preco)*(itens.quantidade) %></td>
+                        </tr>
+                        <% }) %>
+                    </table>
+
+
+                </div>
+                
+            </div>
+             
+
+        </div>
+        <%- include('partials/footer') %>
+    </body>
+    <script src="/public/javascripts/script.js"></script>
+</html>

@@ -1,0 +1,23 @@
+img {
+    width: 7em;
+}
+
+.DescicaoProduto{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.DescicaoProduto h4{
+    margin-left: 0.5rem;
+}
+
+table{
+    text-align: left;
+}
+
+th, td{
+    padding: 0rem 3rem 1rem 0rem;
+}
