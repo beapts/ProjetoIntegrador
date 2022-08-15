@@ -82,3 +82,5 @@ CREATE TABLE `itens_pedido` (
   CONSTRAINT `id_pedido_itens_fk` FOREIGN KEY (`id_pedido_fk`) REFERENCES `pedido` (`id`),
   CONSTRAINT `item_fk` FOREIGN KEY (`item_fk`) REFERENCES `produtos` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE itens_pedido ADD quantidade int;
