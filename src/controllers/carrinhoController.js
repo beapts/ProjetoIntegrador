@@ -75,7 +75,7 @@ const carrinhoController = {
 	finalizarpedido: async (req,res) => {
 		let carrinho = await Carrinho.findAll();
 
-		let {id} = req.params
+		let {id} = req.session.usuario
 
 		let quantidadeItens = 0
 		let valorTotal = 0
@@ -89,7 +89,7 @@ const carrinhoController = {
 				id_usuario_fk: id,
 				quantidade_itens: quantidadeItens,
 				valor_total: valorTotal,
-				forma_pagamento: 'PIX',
+				forma_pagamento: 'Cartão de Débito',
 				endereco_entrega: 'Rua de teste, 455',
 			}); 
 
@@ -105,9 +105,8 @@ const carrinhoController = {
 					quantidade: carrinho[i].quantidade
 				}) 
 			}  
-			
-/* 			await Carrinho.destroy()
- */
+
+ 
 			res.render('pedidoFinalizado')
 		}
 		catch (error){

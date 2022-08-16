@@ -14,7 +14,7 @@
         <div class="main-container">
              <div class="submenu">
                 <a id= "menuAtual" href="#"> <h4> Meus dados </h4> </a>
-                <a href="/painel/meuspedidos/<%= usuario.id %>" id="menuSecundario"> <h4>Meus pedidos </h4></a>
+                <a href="/painel/meuspedidos" id="menuSecundario"> <h4>Meus pedidos </h4></a>
              </div>
 
              <div class="divFormulario">
@@ -29,7 +29,7 @@
                         <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" disabled="disabled" value="<%= usuario.cpf %>">
                     
                 </form>
-                <a href="/painel/painelEdicao/<%= usuario.id %>""><button id="botaoEditar"> Editar </button></a>
+                <a href="/painel/painelEdicao"><button id="botaoEditar"> Editar </button></a>
              </div>
 
         </div>

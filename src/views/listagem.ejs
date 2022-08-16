@@ -5,33 +5,25 @@
 <body>
 
     <%- include('partials/headerNavbar') %>
-    <div class="mini-menu">
-        <a href="/">Home</a>
-        <span class="mini-divisor-do-mini-menu">•</span>
-        <span class="pagina-atual">Categorias</span>
-        </div>
-    
-        <div class="todos-os-produtos">
-            <div class="categorias">
-                <div class="produtosCol" id="colecao_primeiro"> 
-                    <img class="img_colecao" src="/images/plants/severin-candrian-qQZdmUzXjZA-unsplash.jpg"/>
-                    <h3 class="titulo_colecao"> Mudas </h3>
-                    <button> Comprar </button>
+        <main id="main-container">
+            <section class="titulo">
+                <h1> Produtos </h1>
+                <h3> <a href="/" class="adicionarmais"> Voltar para home</a></h3>
+            </section>
+
+            <section class="produtos">
+                <% produtos.forEach(produtos =>{ %>
+                <div class="itens">
+                    <img class="img_colecao" src="<%= produtos.produto_img %>"/>
+                    <h3 class="titulo_colecao"> <%= produtos.nome %> </h3>
+                    <p class="desc_colecao"> <%= produtos.descricao_curta %></p>
+                    <p class="preco_colecao"> R$ <%= produtos.preco %></p>
+                    <a href="/produto/<%= produtos.id %>"> <button> Visualizar </button> </a>
                 </div>
-    
-                <div class="produtosCol" id="colecao_segundo"> 
-                    <img class="img_colecao" src="/images/plants/severin-candrian-qoegZJ3ybOY-unsplash.jpg"/>
-                    <h3 class="titulo_colecao"> Suportes & Acessórios </h3>
-                    <button> Comprar </button>
-                </div>
-    
-                <div class="produtosCol" id="colecao_terceiro"> 
-                    <img class="img_colecao" src="/images/plants/severin-candrian-SOhatM1jFLk-unsplash.jpg"/>
-                    <h3 class="titulo_colecao"> Vasos </h3>
-                    <button> Comprar </button>
-                </div>
-            </div>
-        </div>
+                <% }) %>
+            </section>
+            
+        </main>
 
     <%- include('partials/footer') %>
 </body>

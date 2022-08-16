@@ -7,7 +7,10 @@ const { Produtos } = require('../../models');
 
 const painelController = {
     painel: async(req, res) => {
-		let {id} = req.params
+		console.log('Entrei na rota')
+		console.log(req.session)
+		let {id} = req.session.usuario
+		console.log(id)
 		try{
 			let usuario = await Usuario.findOne({
 				where: {
@@ -22,7 +25,7 @@ const painelController = {
 		}
 	},
 	painelEdicao: async(req, res) => {
-		let {id} = req.params
+		let {id} = req.session.usuario
 		let usuario = await Usuario.findOne({
 			where: {
 				id: id
@@ -32,7 +35,7 @@ const painelController = {
 		res.render('painelEdicao', {usuario});
 	},
 	atualizarDados: async (req, res) => {
-		let {id} = req.params
+		let {id} = req.session.usuario
 		let {nome, email, cpf} = req.body
 		
 		try {
@@ -59,12 +62,12 @@ const painelController = {
 		}
 	},
 	pedidos: async (req, res) => {
-		let{id} = req.params
+		let {id} = req.session.usuario
 
 		try {
 			let pedidos = await Pedido.findAll({
 				where: {
-					id_usuario_fk: '1' /* Chumbado para testar */
+					id_usuario_fk: id /* Chumbado para testar */
 				}
 			})
 			console.log(pedidos)

@@ -1,13 +1,160 @@
 /* --- Mini-menu ---*/
-
-.mini-menu {
-    margin: 1rem 0.4rem 2rem 0.4rem;
-    font-size: 1.2rem;
+.titulo{
+    margin: auto;
+    width: 90%;
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1.5rem;
 }
 
-/* --- Categorias ---*/
+.titulo h1 {
+    font-size: 1.8rem;
+}
 
-.categorias {
+.titulo h3 {
+    font-size: 1rem;
+    color: lightslategray;
+    text-decoration: none;
+    margin-bottom: 0.4rem;
+}
+
+/* Main */
+.produtos {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%
+}
+
+.itens{
+    width: 22%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* CSS PADRÃO */
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* --- Layout --- */
+body {
+    background-color: #FFFFFF;
+    /* overflow-x: hidden; */
+}
+
+#textoPromocional, p, button, a {
+    font-family: 'Lato', sans-serif;
+}
+
+/* --- Header --- */
+
+#textoPromocional {
+    background-color: black;
+    color: white;
+    margin: 6rem 0px 0px 0px;
+    padding: 0.5rem 0.4rem 0.4rem 0.4rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+nav, ul, header section {
+    display: flex;
+    flex-direction: row;
+}
+
+nav{
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-family: 'Quicksand';
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.46);
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+#imagemLogo{
+    width: auto;
+    height: 6rem;
+}
+
+.navIcones img{
+    width: 1.5rem;
+    margin: 0.5rem;
+}
+
+.menuOpcoes {
+    margin-right: 2.3rem;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    cursor: pointer;
+    
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menuOpcoes:hover {
+    border-bottom: 1px black solid;
+}
+
+/* --- Futuro Carrosel ---*/
+
+.carrosel img{
+    width: 100%;
+}
+
+.carrosel{
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* --- Seção de Destaques ---*/
+
+.headerDestaques, .headerColecao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0rem 1.5rem 0rem
+}
+
+.headerDestaques h2, .headerColecao h2{
+    font-size: 2.4rem;
+}
+
+.produtosDestaques {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,4 +162,195 @@
     justify-content: space-between;
     margin: auto;
     width: 90%;
+}
+
+.produtosDesc{
+    width: 20rem;
+}
+
+.produtosDesc img{
+    width: 100%;
+}
+
+.titulo_destaques {
+    margin: 0.6rem;
+    font-size: 1.5rem;
+}
+
+.desc_destaques {
+    margin: 0.4rem;
+}
+
+.preco_destaques{
+    margin-bottom: 0.4rem;
+}
+
+button {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 1rem;
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+/* --- Produto importante ---*/
+
+.importante{
+    width: 90%;
+    margin: 4rem auto;
+
+}
+
+.importanteProd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align:left;
+    justify-content: space-between;
+
+}
+
+.importante img{
+    width: 26rem;
+}
+
+
+.titulo_importante{
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.desc_importante {
+    margin: 1rem;
+    text-align: justify;
+}
+
+.preco_importante{
+    margin: 2.5rem 1rem 1rem 1rem;
+    font-size: 1.2rem;
+}
+
+.botaoImportante {
+    width: 98%;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* --- Produtos de Coleção --- */
+
+/* PS: a headers da section de coleção esta junto com a de destaques */
+
+.produtosColecao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+}
+
+.produtosCol {
+    width: 18rem;
+}
+
+.produtosCol img{
+    width: 100%;
+}
+
+.titulo_colecao {
+    margin: 1rem 0.4rem 0.4rem 0.4rem;
+    font-size: 1.5rem;
+}
+
+.desc_colecao {
+    margin: 0.4rem;
+}
+
+.preco_colecao{
+    margin-bottom: 0.6rem;
+}
+
+
+/* --- Banners --- */
+
+.banner{
+    width: 90%;
+    margin: 4rem auto;
+}
+
+.banner_cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.banner_cont div{
+    width: 36.5rem;
+}
+
+.img_banner:hover{
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.46);
+}
+
+.img_banner{
+    width: 100%;
+}
+
+
+/* --- Footer ---*/
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+#footerLinks {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 4rem auto;
+
+}
+
+#footerInstitucional, #footerAjuda, #footerMinhaConta {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#footerLinks h3{
+    margin: 3rem 0rem 1rem 0rem;
+    font-size: 1.8rem;
+}
+
+.footerSocialMedia{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerSocialMedia img{
+    width: 3rem;
+    margin: 0.3rem;
+}
+
+
+footer p {
+    text-align: center;
+    padding: 0.5rem;
 }
