@@ -27,20 +27,7 @@ const cadastroController = {
         } catch (error) { 
           console.log(error.message) 
           }
-    },
-
-    buscarUsuario: async (req, res) => {
-      const usuario = await db.Users.findAll()
-      res.send(usuario)
-    },
-
-    editarUsuario: async (req, res) => {
-      const editarUsuario = await db.Users.update(users, { where: { id } })
-    },
-
-    deletarUsuario: async (req, res) => {
-      const deletarUsuario = await db.Users.destroy({ where: { id } })
-    },
+    }
   }
   
   module.exports = cadastroController;

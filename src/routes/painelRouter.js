@@ -9,6 +9,7 @@ router.post('/painelEdicao/:id', painelController.atualizarDados);
 router.get('/meuspedidos/:id', painelController.pedidos);
 router.get('/meuspedidos/pedido/:idPedido', painelController.pedidoItens);
 
+router.post('/deletarusuario/:id', painelController.deletarUsuario)
 
 
 

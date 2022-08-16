@@ -97,7 +97,11 @@ const painelController = {
 			console.log(error)
 			res.send('Algo deu errado, contate o nosso suporte')
 		}
-	}
+	},
+	
+	deletarUsuario: async (req, res) => {
+		const deletarUsuario = await db.Users.destroy({ where: { id } })
+	  },
 }
 
 module.exports = painelController

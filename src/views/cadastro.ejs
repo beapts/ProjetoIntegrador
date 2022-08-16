@@ -16,15 +16,15 @@
                 <div class="criar-conta-meio">
                     <form action="/cadastro/cadastrarusuario" method="POST" id="formulario-cadastro" class="form-cadastro">
                         <p><label for="nome">Nome Completo:</label></p>
-                        <p><input type="text" name="nome" id="nome-cadastro" pattern="[a-zA-Z]+" required></p>
+                        <p><input type="text" name="nome" id="nome-cadastro"></p>
                         <p><label for="email">E-mail:</label></p>
-                        <p><input type="email" name="email" id="email-cadastro" pattern="(\w\.?)+@[\w\.-]+\.\w{2,})" required></p>
+                        <p><input type="email" name="email" id="email-cadastro"></p>
                         <p><label for="cpf">Digite um CPF no formato: xxx.xxx.xxx-xx</label></p>
-                        <p><input type="text" name="cpf" id="cpf-cadastro" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" required></p>
+                        <p><input type="text" name="cpf" id="cpf-cadastro" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})"></p>
                         <p><label for="senha">Senha:</label>
-                        <p><input type="new-password" name="senha" id="senha-cadastro" required></p>
+                        <p><input type="new-password" name="senha" id="senha-cadastro"></p>
                         <p><label for="confirmacao-senha">Confirmar senha:</label>
-                        <p><input type="new-password" name="confirmacao-senha-cadastro" id="confirmacao-senha" required></p>
+                        <p><input type="new-password" name="confirmacao-senha-cadastro" id="confirmacao-senha-cadastro"></p>
                         <div class="criar-conta-baixo">
                             <a href="/">Voltar</a>
                             <button class="botao-cadastro" type="submit"> Enviar </button>
