@@ -3,12 +3,11 @@ const bcrypt = require('bcryptjs');
 const { hash } = require("bcrypt");
 
 const loginController = {
-    loginForm: (req, res) => {
+    loginForm: async (req, res) => {
         res.render('login')
     },
     loginUsuario: async (req, res) => {
         const { email, senha } = req.body;
-        console.log(req.session);
         try {
             const usuario = await db.Usuario.findOne({
                 where: {
@@ -17,25 +16,25 @@ const loginController = {
                 }
             }) 
 
-            function criarHash(senha) {
+            /* function criarHash(senha) {
                 const cost = 10;
                 const salt = bcrypt.genSaltSync(cost);
                 const cyphertext = bcrypt.hashSync(senha, salt);
                 return cyphertext;
               }
-            let hashResult = criarHash(senha);
+            let hashResult = criarHash(senha); */
 
             if (!usuario) {
-                return res.send("Erro: Usuário não encontrado, verifique o e-mail")
+                return res.send("Erro: Login não autorizado, verifique o e-mail e a senha")
             };
 
-            if (!hashResult) {
+            /* if (!hashResult) {
                 return res.send("Erro: Senha incorreta")
-            };
+            }; */
 
-            let verificarSenha = bcrypt.compareSync(req.body.senha, usuario.senha);
+            /* let verificarSenha = bcrypt.compareSync(req.body.senha, usuario.senha); */
 
-                if (verificarSenha = true) {
+                if (req.body.senha == usuario.senha) {
                     req.session.usuario = usuario;
                     console.log(req.session);
                     return res.redirect('/') 

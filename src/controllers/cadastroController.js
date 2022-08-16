@@ -10,16 +10,16 @@ const cadastroController = {
     cadastrarUsuario: async (req, res) =>  {
       let { nome, email, senha, cpf } = req.body;
       try {
-        function criarHash(senha) {
+        /* function criarHash(senha) {
           const cost = 10;
           const salt = bcrypt.genSaltSync(cost);
           const cyphertext = bcrypt.hashSync(senha, salt);
           return cyphertext;
         }
-        let hashResult = criarHash(senha);
+        let hashResult = criarHash(senha); */
 
         var newUser = await db.Usuario.create({
-            nome, email, senha: hashResult, cpf
+            nome, email, senha, cpf
         })
         if (newUser) {
           return res.redirect("/login");
