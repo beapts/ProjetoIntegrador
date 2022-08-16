@@ -16,6 +16,7 @@ const carrinhoController = {
 		let {id} = req.params
 
 		try {
+			let{quantidade} = req.body
 			let produto = await Produtos.findOne({
 				where: {
 					id
@@ -26,7 +27,7 @@ const carrinhoController = {
 				id_produto: produto.id,
 				nome_produto: produto.nome, 
 				preco:produto.preco,
-				quantidade: '1',
+				quantidade: quantidade,
 				produto_img: produto.produto_img
 			});
 			
